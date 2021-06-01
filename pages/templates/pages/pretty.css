@@ -1,0 +1,66 @@
+.container {
+   
+    display: flex;
+    height: 15%;
+    
+    align-items: flex-start;
+    justify-content: center;
+
+   
+}
+
+.container div {
+    width: 25%;
+   
+    border: 2px solid black;
+}
+
+.content {
+    display: flex;
+    
+    justify-content: space-between;
+    
+   
+    
+} 
+
+.content div {
+    border: 2px solid black;
+    padding: 5x;
+    
+    
+}
+
+.content-two {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 100px;
+    height: 300px;
+   
+    margin-top: 25px;
+    margin-left: 100px; 
+    margin-right: 100px; 
+    background-color: maroon;
+    
+
+}
+
+
+
+
+
+.footer-one {
+   display: flex;
+   flex-direction: column;
+   margin-top: 10px;
+   background-color: aqua;
+   
+   
+   
+}
+
+.footer-one div {
+    border: 2px solid black;
+    
+}

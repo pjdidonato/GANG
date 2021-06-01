@@ -1,0 +1,79 @@
+.container div {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+.content div {
+    padding: 50px;
+    height: 200px;
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+.content .side-nav-1{ 
+    height: 350px;
+   
+    width: 25px;
+}
+
+.content .body-content{ 
+    height: 350px;
+    
+    width: 65%;
+}
+
+.content .side-nav-2{ 
+    height: 350px;
+    
+    width: 25px;
+}
+
+
+
+
+
+
+.footer-one div {
+   
+    height: 100%;
+    text-align: center;
+    
+    
+}
+body {
+    margin: 0;
+}
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+    background-color: #ffeead;
+}
+
+.container div:nth-child(1) {
+    background-color: #96ceb4
+}
+
+.container div:nth-child(2) {
+    background-color: #ff6f69
+}
+.container div:nth-child(3) {
+    background-color: #88d8b0
+}
+.container div:nth-child(4) {
+    background-color: blueviolet
+}
+
+.content div:nth-child(1) {
+    background-color: #ff6f69
+}
+.content div:nth-child(2) {
+    background-color: #88d8b0
+}
+.content div:nth-child(3) {
+    background-color: blueviolet
+}

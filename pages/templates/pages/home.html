@@ -1,11 +1,77 @@
 {% extends 'pages/base.html' %} 
 {% block content %}
 
-<body style="background-color:tan"> 
-<h1> Homepage </h1>
-<div style="text-align:center"> Hi Amber</div>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href="pretty.css" >
+<link rel='stylesheet' href="basic.css" >
+
+<script>
+    // run this function when the document is loaded
+    window.onload = function() {
+
+      // create a couple of elements in an otherwise empty HTML page
+      const heading = document.createElement("h1");
+      const heading_text = document.createTextNode("Big Head!");
+      heading.appendChild(heading_text);
+      document.body.appendChild(heading);
+   }
+ </script>
+
+</head>
+<body onload="window.alert('Welcome to my home page!');">
+<nav class='container'>
+    <div class='home'>Home</div>
+    <div class='search'>Search</div>
+    <div class='logout'>Logout</div>
+    <div class='profile'>Profile</div>
+
+
+</nav>
+<section class='content'> 
+
+<div class='side-nav-1'>  
+   
+    <p> Side Nav One  </p>
+
+
+</div>
+
+<div class='body-content'> 
+
+    <p> Body Content </p>
+   
+   
+   </div>
+
+<div class='side-nav-2'>  
+
+    <p> Side Nav Two</p>
+   
+</div>
+
+</section>
+
+<section class='content-two'> 
+
+    <p> Content Two</p>
+
+
+
+</section>
+<footer class='footer-one'> 
+<div class='foot'>
+
+<p> Footer </p>
+
+
+
+</div>
+</footer>
 
 </body>
+</html>
 {% endblock content %}
 
 
