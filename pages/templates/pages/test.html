@@ -1,10 +1,11 @@
+{% extends 'pages/base.html' %} 
 <!DOCTYPE html>
 <html>
 <head>
 <title>Dr.Doge</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel='stylesheet' href='mod.css'>
+<link rel='stylesheet' href='pages/mod.css'>
 <script > (function() {
 
     var img = document.getElementId('dr').firstChild;
@@ -25,7 +26,7 @@
 <div class="header">
     
   
-    <img id='dr' src='imgs/drdoge.jpeg' > <h1>Dr Doge</h1> 
+    <img id='dr' src='pages/drdoge.jpeg' > <h1>Dr Doge</h1> 
   <p>the  <b>first</b> defi heatlh care token</p>
 </div>
 
@@ -79,3 +80,4 @@
 
 </body>
 </html>
+{% endblock content %}
