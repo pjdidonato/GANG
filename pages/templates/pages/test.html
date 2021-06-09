@@ -118,7 +118,7 @@ body {
     
 <div class='header'>
     
-    <button class='top-btn'> Connect Your Wallet </button>
+    <button onclick="alertTG()"  class='top-btn'> Connect Your Wallet </button>
    
     
    
@@ -132,34 +132,27 @@ body {
    
 </div>
 
+<script> 
 
 
-<script>  
-$("telegram").on('click', function(event) {
-    
-    let x = document.getElementById(".navbar")
-    let y = document.getElementsByClassName(".footer")
-    
-    if (x == true) {
-    event.preventDefault();
-    document.getElementById(".navbar").style.flexGrow = "5";
-    window.location = "https://t.me/joinchat/jk8uXIp7bq8zM2Fh";
-    }
-    if (y == true) {
-    event.preventDefault();
-    document.getElementById(".footer").style.flexGrow = "5";
-    window.location = "https://www.twitter.com";
-    }
-});
-</script> 
+
+function alertTG() {
+  alert('Coming Soon')
+}
+
+
+
+</script>
+
+
 
 
 
 <div class="navbar">
     <a href='#'> Home</a>
     <a href='https://t.me/joinchat/jk8uXIp7bq8zM2Fh'> Join Our Telegram</a>
-    <a href='#'> View Charts</a>
-    <a href='#'> GoFundMe</a>
+    <a onclick="alertTG()"  href='#'> View Charts</a>
+    <a onclick="alertTG()"  href='#'> GoFundMe</a>
 </div>
 
 <div class='row-1'>
@@ -204,7 +197,7 @@ $("telegram").on('click', function(event) {
 </div>
 
 <div class='footer'>
-    <h2> Twitter: <a href='https://www.twitter.com'> @DrDoge</a></h2>
+    <h2> Twitter: <a href='www.twitter.com'> @DrDoge</a></h2>
 </div>
 
 
