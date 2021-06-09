@@ -8,7 +8,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style>
+*{
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+
+.header {
+    
+    padding: 60px;
+    
+  
+    background: #1abc9c;
+    color: white;
+    
+}
+#dr {
+    width: 100px;
+    height: 100px;
+  }
+ 
+
+.top-btn {
+    float: right; 
+    
+}
+
+
+
+
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    justify-content: space-evenly;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.row-1 {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+.side {
+    flex: 30%;
+    background-color: blue;
+    padding: 50px;
+    
+   
+}
+
+.main {
+    flex: 70%;
+    background-color: tan;
+    padding: 30px;
+    
+    
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: darkgray;
+    
+}
+
+/* Responsive Layout - when screen is less than 700 px wide
+   the screen makes two columns stacked on top of each other
+   instead of next to each other */ 
+
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+</style> 
 
 </head>
 <body>
