@@ -1,136 +1,101 @@
 {% extends 'pages/base.html' %} 
 {% block content %}
 <!DOCTYPE html>
-<html>
-<head>
-
-<style> * {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* Style the header */
-.header {
-  grid-area: header;
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-}
-.navbar {
-  display: flex;
-  background-color: #333;
-  justify-content: space-between;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  color: white;
- 
-  text-decoration: none;
-  text-align: center;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#dr {
-  width: 100px;
-  height: 100px;
-}
-
-#dr img {
-  width: 100%;
-}
-
-/* The grid container */
-.grid-container {
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'left middle middle middle middle right' 
-    'left middle middle middle middle right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-} 
-
-.left,
-.middle,
-.right {
-  padding: 100px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Style the left column */
-.left {
-  grid-area: left;
-}
-
-/* Style the middle column */
-.middle {
-  grid-area: middle;
-}
-
-/* Style the right column */
-.right {
-  grid-area: right;
-}
+<html> 
+<head> 
+<title> Dr. Doge</title> 
+<link rel='stylesheet' href='sad.css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-/* Style the footer */
-.footer {
-  grid-area: footer;
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-}
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
-  }
-}</style>
 </head>
 <body>
 
 
-<div class="grid-container">
-  <div class="header">
-    <img id='dr' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DTm1YPtkRXNyjzHH_hAPIDRRo-oVk2y_pQ&usqp=CAU'   > <h1>Dr Doge</h1> 
-    <div class="navbar">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Charts</a>
-      <a href="#">Roadmap</a>
-    </div>
-  </div>
-  
-  <div class="left" style="background-color:#aaa;">Column</div>
-  <div class="middle" style="background-color:#bbb;">Column</div>  
-  <div class="right" style="background-color:#ccc;">Column</div>
-  
-  <div class="footer" style='height: 100px;'>
     
-  </div>
-</div>
-<div class="left" style="background-color:#aaa;">Column</div>
-<div class="middle" style="background-color:#bbb;">Column</div>  
-<div class="right" style="background-color:#ccc;">Column</div>
+<div class='header'>
+    
+    <button class='top-btn'> Connect Your Wallet </button>
+   
+    
+   
+        <p > 
+       
+    <img id='dr' src='drdoge.jpeg' > 
+    <h1>Dr Doge</h1> 
+    <i>The <b>first</b> ever defi health care token</i>
+    </p>
 
-<div class="footer">
-    <p>Footer</p>
-  </div>
+   
+</div>
+
+
+
+
+
+<div class="navbar">
+    <a href='ind.html'> Home</a>
+    <a href='telegram.html'> Join Our Telegram</a>
+    <a href='#'> View Charts</a>
+    <a href='#'> GoFundMe</a>
+</div>
+
+<div class='row-1'>
+    <div class="side">
+        <h2> Who is Dr. Doge ?</h2>
+        <p> Dr. Doge is first ever defi token out 
+            there with the purpose of assisting those who 
+            need assistance. Dr. Doge takes a percentage of 
+            the money earned and disburses the funds amoung
+            pre-selected GoFundMes.  
+        </p>
+    </div>
+    <div class="main">
+        <h2> Why is Dr. Doge different ?</h2>
+        <p>Dr. Doge is here to help. The initial goal of Dr. Doge 
+            is to help pay off as many GoFundMes as possible. 
+            This feature will be implemented at launch. Those who buy / sell
+            will be giving away a percentage of their coins to be stored into 
+            a separate wallet. That wallet will convert BNB to USDC then over 
+            a VISA card offered by Crypto.com. That money will be sent at random 
+            to the GoFundMes we have selected. 
+        </p>
+        <br></br>
+        
+          <p >
+            The community is tired of scam coins as well as coins created that serve no purpose. 
+            Individuals who speak in circles 
+            without actually answering your questions? 
+            Individuals are creating coins without any knowledge 
+            of blockchain. 
+          </p>
+        <ul>
+            <li> Locked Liquidity </li>
+            <li> Weekly Burns </li>
+            <li> Anti-Whale Protection </li>
+            <li> Limit buys / sells</li>
+
+        </ul>
+    <p></p>
+    </div>
+    
+</div>
+
+<div class='footer'>
+    <h2> Footer </h2>
+</div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
 
