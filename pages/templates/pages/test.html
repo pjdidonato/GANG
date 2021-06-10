@@ -15,94 +15,79 @@ background-color: orange;
 }
 
 /* ============= Animation background ========= */
-.background {
-  background: linear-gradient(132deg, #a84754, rgb(226, 180, 95), #5c5f75);
-  
-  animation: Gradient 15s ease infinite;
-  position: relative;
-  height: 100vh;
-  width: 100%;
+.parent-background {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-around;
+
+
  
-  padding:0;
-  margin:0px;
+  
+  background: linear-gradient(132deg, #a84754, rgb(226, 180, 95), #5c5f75);
+
+ 
+  
+ 
+  
+    padding: 50px;
+    height: 75vh;
 }
 
 
-/* ================= Header ============ */
-header{
-  position: absolute;
-  top:0%;
-  left: 0%;
-  width:100%;
-  margin: 0;
-  padding: 0;
+.child-background-1{
+   align-self: flex-start;
+    
+ 
+    
 }
-/* navbar */
-nav{
-  color: #FFF;
-  float: right;
-  margin:30px 90px;
+
+.child-background-2{
+   text-align: center;
+   
+    align-self: center;
+    padding: 40px;
+    
 }
-nav ul{
-  list-style: none;
+.child-background-3{
+  align-self: flex-end;
+  
+    
+    
+    
 }
-nav ul li {
-  float: left;
-  transition: .3s;
-}
-nav ul li a{
+
+.child-background-1 a{
   text-decoration: none;
   color: #EFEEF5;
-  transition: .5;
+ 
   font-size: 15px;
-  margin-left:16px;
+ 
 }
-nav ul li:hover a{
+.child-background-3 a{
   text-decoration: none;
-  color: #591BC5;;
+  color: #EFEEF5;
+ 
+  font-size: 15px;
+ 
 }
-nav ul li:hover{
-  height: 45px;
-  padding-top: 30px;
-  margin-top: -30px;
- background: #EFEEF5;
-  text-decoration: none;
-  transform: skew(15deg);
-}
-/* Logo */
-.logo{
-  
-  background: #EFEEF5;
-  margin: 40px 63px;
-  float: left;
-  transform: rotate(-30deg);
-}
-.logo span{
-  color: #591BC5;
-  font-size: 2em;
-  line-height: 1.4;
-  
-  font-weight: bold;
-}
-/* Header content & title & button*/
-.header-content{
-  margin-top:25%;
-  text-align: center;
-  color:  #EFEEF5;
-}
-.header-content h1{
+
+
+
+
+.child-background-2 h1{
   text-transform: uppercase;
   font-size: 3em;
   letter-spacing: 1px;
 }
-.header-content p {
-  font-size: 20px;
+.child-background-2 p {
+  font-size: 25px;
   line-height: 1.5;
-  margin: 20px auto;
+ 
 }
-.header-content button{
+.child-background-2 button{
   width: 140px;
-  margin:20px 10px;
+  
   color: #591BC5;
   font-size: 17px;
   border:1px solid #EFEEF5;
@@ -111,9 +96,9 @@ nav ul li:hover{
   border-radius: 20px;
   padding: 10px;
   cursor:pointer;
-  transition: .3s;
+
 }
-.header-content button:hover{
+.child-background-2 button:hover{
   border-radius: 0;
 }
 
@@ -148,7 +133,7 @@ nav ul li:hover{
 
 .parent-header > div {
     
-    padding: 20px;
+    padding: 10px;
 }
 /*////////////////////////////////*/
 .parent-navbar {
@@ -321,42 +306,39 @@ nav ul li:hover{
 <body>
 
     
-        <div class="background">
+        <div class="parent-background">
            
+                <div class="child-background-1">
+                    <a href="#">Home</a>
+                        <a href="#">Charts</a>
+                        <a href="#">Telegram</a>
+                       <a href="#">White Paper</a>
+                       <a href="#">Tokenomics</a>
+                        
+                     
+              </div>
+               <div class="child-background-2">
+                         <h1>Welcome</h1>
+                        <p> What do you know about Dr. Doge ?<br>
+                           The <b> first </b> ever defi health care token </p>
+                        <button> Buy Dr.Doge </button>
+                        <button>Connect Wallet</button>
+                        </div>
+
+
+                        <div class="child-background-3">
+                            <a href="#">Roadmap </a>
+                                <a href="#">Donate</a>
+                                <a href="#">FAQ</a>
+                               <a href="#">Login</a>
+                               
+                                
+                             
+                      </div>
+            
         </div>
-    <!-- header -->
-       <header>
-    <!-- navbar -->
-         <nav>
-            <ul>
-               <li><a href="#">Home</a></li>
-                <li><a href="#">Charts</a></li>
-                <li><a href="#">Telegram</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Tokenomics</a></li>
-                <li><a href="#">White Paper</a></li>
-             </ul>
-
-
-           </nav>
-    <!-- logo -->
-
-
-
-          <div class="logo"><span>Dr. Doge </span></div>
-    <!-- title & content -->
-
-
-
-
-          <section class="header-content">
-             <h1>Welcome</h1>
-            <p> What do you know about Dr. Doge ?<br>
-               The <b> first </b> ever defi health care token </p>
-            <button>Order Books</button>
-            <button>Go Fund Me</button>
-          </section>
-      </header>
+   
+       
 
     <div class='Top-Header'>
         <h2> Twitter: <a href='www.twitter.com'> @DrDoge</a></h2>
