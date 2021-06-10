@@ -1,204 +1,335 @@
 {% extends 'pages/base.html' %} 
 {% block content %}
 <!DOCTYPE html>
-<html> 
-<head> 
-<title> Dr. Doge</title> 
-<link rel='stylesheet' href='pretty.css'>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
 
+<link rel='stylesheet' href='flex.css'>
 <style>
-*{
-    box-sizing: border-box;
-}
+
+
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
+    background-color: orange;
 }
 
-.header {
-    
-    padding: 60px;
-    
-  
-    background: #1abc9c;
-    color: white;
-    
+.Top-Header {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    background: darkgray;
+    margin-bottom: 10px;
 }
-#dr {
-    width: 100px;
-    height: 100px;
-  }
- 
-
-.top-btn {
-    float: right; 
-    
-}
-
-
-
-
-
-.navbar {
+.parent-header {
     display: flex;
-    background-color: #333;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+   
+    row-gap: 10px;
+    padding: 50px;
+    height: 150px;
+    background-color: red;
 }
 
-.navbar a {
+.parent-header > div {
+    
+    padding: 10px;
+}
+/*////////////////////////////////*/
+.parent-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    padding: 10px;
+    row-gap: 10px;
+    
+}
+.parent-navbar a {
     color: white;
-    padding: 14px 20px;
+    padding: 5px;
     text-decoration: none;
     text-align: center;
 }
 
-.navbar a:hover {
+.parent-navbar a:hover {
     background-color: #ddd;
     color: black;
 }
+.parent-navbar > div {
+    width: 250px;
+    height: 50px;
+}
 
+/*////////////////////////////////*/
 
-.row-1 {
+.parent-content  {
     display: flex;
     flex-wrap: wrap;
-    
-    
-    
-}
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-around;
 
-.side {
-    flex: 30%;
-    background-color: blue;
-    padding: 50px;
-    
+
+    row-gap: 10px;
+    font-size: 10px;
+    background-color: blanchedalmond;
+    margin-top: 50px;
+   
+   
    
 }
-
-.main {
-    flex: 70%;
-    background-color: tan;
-    padding: 30px;
+.parent-content > div {
     
+    height: 250px;
+    
+   
+   
+   
+}
+/*////////////////////////////////*/
+.child-content-1 {
+    background-color: aqua;
+  
+    flex: 30%;
+    
+
+   
+  
+}
+.child-content-2 {
+    background-color: rosybrown;
+    
+    flex: 70%;
+   
+
+    
+}
+.child-content-3 {
+    background-color:  greenyellow;
+    
+    flex: 30%;
+   
+
+    
+}
+.child-content-4 {
+    background-color: blueviolet;
+    flex: 70%;
+   
+
     
 }
 
+.child-content-5 {
+    background-color:  pink;
+    
+    flex: 30%;
+   
+
+    
+}
+.child-content-6 {
+    background-color: lightsalmon;
+    flex: 70%;
+   
+
+    
+}
+
+/*////////////////////////////////*/    
+ .parent-header .child-header-1 {
+     background-color: blue;
+     width: 100px;
+     align-self: stretch;
+    
+    
+}
+.parent-header .child-header-2 {
+    background-color: blueviolet;
+   width: 100px;
+  
+
+}
+/*.parent-header .child-header-3 {
+    background-color: lightcoral;
+    width: 100px;
+    align-self: center;
+  
+}*/ 
+/*////////////////////////////////*/                             
+/*.parent-header .child-header-4 {
+    background-color: blueviolet;
+    width: 100px;
+    align-self: flex-start;
+   
+} */ 
+.parent-header .child-header-5 {
+    background-color: burlywood;
+    width: 100px;
+   
+    
+ 
+   
+}
+.parent-header .child-header-6 {
+    background-color: pink;
+    width: 100px;
+    align-self: stretch;
+    
+    
+}
+/*////////////////////////////////*/    
+
+.parent-navbar .navbar-1 {
+    background-color: orangered;
+}
+
+.parent-navbar .navbar-2 {
+    background-color: darkcyan
+}
+.parent-navbar .navbar-3 {
+    background-color:  fuchsia;
+}
+/*////////////////////////////////*/
 .footer {
+    margin-top: 10px;
     padding: 10px;
     text-align: center;
     background: darkgray;
-    
 }
-
-/* Responsive Layout - when screen is less than 700 px wide
-   the screen makes two columns stacked on top of each other
-   instead of next to each other */ 
-
 @media screen and (max-width: 700px) {
-    .row, .navbar {
-        flex-direction: column;
+    .parent-header, .parent-navbar, .parent-content, .footer {
+        flex-direction: row;
     }
 }
-
-
-
-
-
-
-
-
-</style> 
+</style>
 
 </head>
 <body>
-
-
-    
-<div class='header'>
-    
-    <button onclick="alertTG()"  class='top-btn'> Connect Your Wallet </button>
-   
-    
-   
-        <p > 
-       
-    <img id='dr' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DTm1YPtkRXNyjzHH_hAPIDRRo-oVk2y_pQ&usqp=CAU' > 
-    <h1>Dr Doge</h1> 
-    <i>The <b>first</b> ever defi health care token</i>
-    </p>
-
-   
-</div>
-
-<script> 
-
-
-
-function alertTG() {
-  alert('Coming Soon')
-}
-
-
-
-</script>
-
-
-
-
-
-<div class="navbar">
-    <a href='#'> Home</a>
-    <a href='https://t.me/joinchat/jk8uXIp7bq8zM2Fh'> Join Our Telegram</a>
-    <a onclick="alertTG()"  href='#'> View Charts</a>
-    <a onclick="alertTG()"  href='#'> GoFundMe</a>
-</div>
-
-<div class='row-1'>
-    <div class="side">
-        <h2> Who is Dr. Doge ?</h2>
-        <p> Dr. Doge is first ever defi token out 
-            there with the purpose of assisting those who 
-            need assistance. Dr. Doge takes a percentage of 
-            the money earned and disburses the funds amoung
-            pre-selected GoFundMes.  
-        </p>
+    <div class='Top-Header'>
+        <h2> Twitter: <a href='www.twitter.com'> @DrDoge</a></h2>
     </div>
-    <div class="main">
-        <h2> Why is Dr. Doge different ?</h2>
-        <p>Dr. Doge is here to help. The initial goal of Dr. Doge 
-            is to help pay off as many GoFundMes as possible. 
-            This feature will be implemented at launch. Those who buy / sell
-            will be giving away a percentage of their coins to be stored into 
-            a separate wallet. That wallet will convert BNB to USDC then over 
-            a VISA card offered by Crypto.com. That money will be sent at random 
-            to the GoFundMes we have selected. 
-        </p>
-        <br></br>
+
+
+
+
+<div class='parent-header'> 
+<!------------------------------------->
+
+    <div class='child-header-1'>
+         <p> Header-1 </p>
+    
+    </div> 
+    <div class='child-header-2'>
+        <p> Header-2 </p>
+   
+   </div> 
+  <!--- <div class='child-header-3'>
+    <p> Header-3 </p>
+
+    </div> --> 
+
+<!------------------------------------->
+
+<!-- <div class='child-header-4'>
+    <p> Header-4 </p>
+
+</div>  --> 
+<div class='child-header-5'>
+    <p> Header-5 </p>
+
+</div> 
+<div class='child-header-6'>
+    <p> Header-6 </p>
+
+</div> 
+ 
+<!------------------------------------->
+<!-- div for Parent Header -->
+</div>
+
+<!------------------------------------->
+
+
+<div class='parent-navbar'>
+   
+    <div class='navbar-1'> <a href='#'>Home </a></div>
+    <div class='navbar-2'> <a href='#'> Join Our Telegram </a></div>
+    <div class='navbar-3'> <a href='#'> View the charts </a> </div>
+   
+</div>
+
+<div class='parent-content'>
+    <div class='child-content-1'> 
+
+    <h2> Dr. Doge </h2>
+    <h1> The <b> first </b> defi health care token </h1>
+
+
+
+
+    </div>
+    <div class='child-content-2'> 
+
+        <h2> Window  </h2>
+        <h1> Content will be displayed in this window </h1>
+    
+    
+    
+    
+        </div>
+        <div class='child-content-3'> 
+
+            <h2> More Content  </h2>
+            <h1> Token nomics </h1>
         
-          <p >
-            The community is tired of scam coins as well as coins created that serve no purpose. 
-            Individuals who speak in circles 
-            without actually answering your questions? 
-            Individuals are creating coins without any knowledge 
-            of blockchain. 
-          </p>
-        <ul>
-            <li> Locked Liquidity </li>
-            <li> Weekly Burns </li>
-            <li> Anti-Whale Protection </li>
-            <li> Limit buys / sells</li>
+        
+        
+        
+            </div>
+            <div class='child-content-4'> 
 
-        </ul>
-    <p></p>
-    </div>
-    
+                <h2> Display more information </h2>
+                <h1> White Paper  </h1>
+            
+            
+            
+            
+                </div>
+
+                <div class='child-content-5'> 
+
+                    <h2> Hold more information </h2>
+                    <h1> How to buy the coin   </h1>
+                
+                
+                
+                
+                    </div>
+
+                    <div class='child-content-6'> 
+
+                        <h2> We need more information </h2>
+                        <h1> What about Dr. Doge is different </h1>
+                    
+                    
+                    
+                    
+                        </div>
 </div>
-
 <div class='footer'>
     <h2> Twitter: <a href='www.twitter.com'> @DrDoge</a></h2>
 </div>
+
+
+
+
+
+
+
+
 
 
 
