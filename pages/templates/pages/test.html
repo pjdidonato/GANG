@@ -46,6 +46,7 @@ background-color: orange;
 }
 
 .child-background-2{
+    margin-top: 20px;
    text-align: center;
    position: absolute;
     align-self: center;
@@ -112,7 +113,8 @@ background-color: orange;
     margin-top: 10px;
     padding: 10px;
     text-align: center;
-    background: linear-gradient(132deg, #111881, rgb(186, 230, 243), #5c5f75);
+     border: .35rem solid orangered;
+    background: linear-gradient(132deg, rgb(224, 84, 28), rgb(201, 125, 26), lightsalmon);
     margin-bottom: 10px;
     border-radius: 20px;
     
@@ -124,16 +126,11 @@ background-color: orange;
     justify-content: space-around;
    
     row-gap: 10px;
-    padding: 50px;
+    padding: 100px;
     height: 150px;
-    background: 
-  linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
-  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
-  linear-gradient(315deg, black 25%, transparent 25%),
-  linear-gradient(45deg, black 25%, transparent 25%);	
-  background-size: 2em 2em;
-  background-color: #232323;
-    border: .5rem solid darkred;
+    background: linear-gradient(132deg, lightsalmon, rgb(201, 125, 27), lightsalmon);
+    border: .35rem solid orangered;
+    border-radius: 50px;
 }
 
 .parent-header > div {
@@ -166,6 +163,7 @@ background-color: orange;
 .parent-navbar > div {
     width: 250px;
     height: 50px;
+    margin-bottom: 50px;
 }
 
 /*////////////////////////////////*/
@@ -174,69 +172,84 @@ background-color: orange;
     display: flex;
     flex-wrap: wrap;
     
-    justify-content: space-around;
+   
     
 
-    row-gap: 10px;
+    row-gap: 30px;
     font-size: 10px;
-    background-color: blanchedalmond;
+ 
     margin-top: 50px;
    
    
    
 }
 .parent-content > div {
-     
+    
     height: 250px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    
     
 }
 /*////////////////////////////////*/
 .child-content-1 {
-    background-color: aqua;
+    background-color: rgb(255, 200, 155);
+    padding: 10px;
+    border:.35rem solid orangered;
     
     
-    
-
-   flex: 30%;
+   flex: 70%;
   
 }
+.child-content-1 .phase-1{
+    float: right;
+}
+.child-content-1 .phase-2{
+   float: left;
+}
+.child-content-1 .phase-3{
+   text-align: center;
+}
 .child-content-2 {
-    background-color: rosybrown;
+    background: linear-gradient(132deg, rgb(224, 84, 28), rgb(201, 125, 26), lightsalmon);
     
-    flex: 70%;
+    
+    flex: 30%;
    
 
     
 }
 .child-content-3 {
-    background-color:  blueviolet;
+    background-color: rgb(255, 200, 155);
      
 
-    flex: 30%; 
+    flex: 70%; 
    
 
     
 }
 .child-content-4 {
-    background-color: blueviolet;
+    background: linear-gradient(132deg, rgb(224, 84, 28), rgb(201, 125, 26), lightsalmon);
+
     
-    flex: 70%;
+    flex: 30%;
     
 }
 
 .child-content-5 {
-    background-color:  pink;
+    background-color: rgb(255, 200, 155);
     
    
-   flex: 30%;
+   flex: 70%;
 
     
 }
 .child-content-6 {
-    background-color: lightsalmon;
+    background: linear-gradient(132deg, rgb(224, 84, 28), rgb(201, 125, 26), lightsalmon);
+
     
    
-    flex: 70%;
+    flex: 30%;
     
 }
 
@@ -285,21 +298,24 @@ background-color: orange;
 /*////////////////////////////////*/    
 
 .navbar-1 {
-    background-color: darkkhaki;
-    border: .5rem solid darkred;
+    background: linear-gradient(132deg, rgb(224, 84, 28), rgb(201, 125, 26), lightsalmon);
+
+    border:.35rem solid orangered;
     padding: 40px;
     border-radius: 30px;
 }
 
 .navbar-2 {
-    background-color:  darkkhaki;
-    border: .5rem solid darkred;
+    background: linear-gradient(132deg, rgb(224, 84, 28), rgb(201, 125, 26), lightsalmon);
+
+    border:.35rem solid orangered;
     padding: 40px;
     border-radius: 30px;
 }
 .navbar-3 {
-    background-color: darkkhaki; 
-    border: .5rem solid darkred;
+    background: linear-gradient(132deg, rgb(224, 84, 28), rgb(201, 125, 26), lightsalmon);
+
+    border:.35rem solid orangered;
     padding: 40px;
     border-radius: 30px;
 }
@@ -308,7 +324,9 @@ background-color: orange;
     margin-top: 10px;
     padding: 10px;
     text-align: center;
-    background:  darkred;
+    border:.35rem solid orangered;
+    border-radius: 50px;
+    background: linear-gradient(132deg, lightsalmon, rgb(201, 125, 27), lightsalmon);
 }
 @media screen and (max-width: 700px) {
     .parent-header, .parent-navbar, .parent-content, .footer {
@@ -350,7 +368,7 @@ background-color: orange;
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
                       </svg></a> 
                    <a  class='fas fa-coins' style='font-size: 30px; color: white; margin-left: 20px; margin-right: 20px;'></a>
-                    
+                   
                  
           </div>
               
@@ -381,7 +399,8 @@ background-color: orange;
        
 
     <div class='Top-Header'>
-        <h2> Twitter: <a href='www.twitter.com'> @DrDoge</a></h2>
+        
+        <h2> Everyone has a right to health care </h2>
     </div>
 
     
@@ -427,18 +446,87 @@ background-color: orange;
         <!-- div for Parent Header -->
         </div>
     <div class='parent-content'>
-        <div class='child-content-1'> 
+        <div class='child-content-1'  > 
     
-        <h2> Dr. Doge </h2>
-        <h1> The <b> first </b> defi health care token </h1>
+        
+       <div class='phase-1'> 
+        <br> </b>
+        <br> </b>
+
+        <h1 style='text-align: center;'> Phase #3 </h1>
+        <br>
+        <h3 style='text-align: center;'> Needed: 50,000 holders </h3>
+
+        <br>
+        <p >  
+            <ul style='list-style: none; font-size: 10px;'> 
+            <b> 
     
-    
-    
-    
+            <li>  Dr. Doge Blockchain   </li>
+            
+            <br> 
+            <li>  Decentralized Health Insurance </li>
+        </b>
+        </ul> 
+        </p>
         </div>
+        <div class='phase-2'> 
+            <br> </br>
+            <br> </br>
+            <h1 style='text-align: center; '> Phase #1 </h1>
+            <br>
+            <h3 style='text-align: center;'> Needed: 1,000 holders </h3>
+
+            <br> 
+            <p>   
+                <ul style='list-style: none; padding: 5px; font-size: 10px; '> 
+              <b> 
+                <li>  Fair Coin Launch   </li>
+                
+                <br>
+              
+              
+                <li>  White Paper Release </li>
+                <br> 
+              
+                
+                <li> GoFundMe Donations </li>
+                <br>
+                <li> Coin Hunt Listing </li>
+            </b>
+            </ul> 
+            </p>
+            </div>
+            
+            <div class='phase-3' > 
+                <h1 style='text-align: center; color:rgb(224, 84, 28); '> Road Map </h1>
+                <br> </b>
+                <h1 > Phase #2 </h1>
+                <br> 
+                <h3 style='text-align: center;'> Needed: 5,000 holders </h3>
+
+                <br>  </b>
+                 
+                    <ul style='list-style: none; font-size: 15px;'> 
+            <b>
+                
+
+                        <li>  CMC Listing  </li>
+                       
+                    <li>   Coin Gecko Listing </li>
+                   
+       
+                   
+                    
+             
+                </b> 
+                </ul> 
+                </p>
+                </div>
+    </div>
         <div class='child-content-2'> 
     
-            <h2> Window  </h2>
+            
             <h1> Content will be displayed in this window </h1>
         
         
