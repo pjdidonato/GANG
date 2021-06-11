@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import HomePageView, AboutPageView 
+from django.conf import settings 
 
 urlpatterns = [
 
