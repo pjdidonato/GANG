@@ -121,12 +121,12 @@ background-color: orange;
 }
 .parent-header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     
     justify-content: space-around;
-   
+    
     row-gap: 10px;
-    padding: 100px;
+    padding: 150px;
     height: 150px;
     background: linear-gradient(132deg, lightsalmon, rgb(201, 125, 27), lightsalmon);
     border: .35rem solid orangered;
@@ -135,7 +135,8 @@ background-color: orange;
 
 .parent-header > div {
     
-    padding: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
 }
 /*////////////////////////////////*/
 .parent-navbar {
@@ -249,6 +250,8 @@ background-color: orange;
  .parent-header .child-header-1 {
      background-color: blue;
      width: 100px;
+     float: left;
+     align-self: stretch;
    
     
     
@@ -408,7 +411,7 @@ background-color: orange;
         
            <div class='child-header-1'>
                <h1 style='font-size: 10px;'> Phase #1: </h1>
-            <ul style='font-size: 10px; list-style: none;text-align: center;'>
+            <ul style='font-size: 10px; list-style: none;'>
                 
                 <li>TG Members</li>
                 <li>Coin Market Cap </li>
