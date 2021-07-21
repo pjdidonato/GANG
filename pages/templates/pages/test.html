@@ -1,247 +1,1384 @@
 {% extends 'pages/base.html' %} 
 {% load static %}
 {% block content %}
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content="width-device-width, initial-scale=1, maximum-scale=1"/>
-        <script src='app.js' defer> </script>
-        <html lang="en">
-        <link rel='stylesheet' href='girly.css' >
-        <style> 
-*
-{ 
-  margin: auto;
-  box-sizing: border-box;
-}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-body { 
-    background-color: salmon;
-}
-.nav {
-    display: flex; 
-     flex-flow: row wrap;
-      text-align: center;
+        body {
+            display: grid; 
+           
+            
+          
+            text-align: center;
+            grid-template-areas: 
+               "circle-1 square-2 circle-3"
+                "square-4 circle-5 square-6"
+                "circle-7 square-8 circle-9"
+                "square-10 circle-11 square-12"
+                "circle-13 square-14 circle-15"
+                "square-16 circle-17 square-18"
+                "circle-19 square-20 circle-21"
+                "square-22 circle-23 square-24"
+                
+               
+            
+            ;
+        }
+        body > * {
+            padding: 2rem;
+            margin: 10px 5px 10px 5px;
+        }
+        div:first-child {
+            grid-area: circle-1;
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            background-color: red;
+            border-radius: 6rem;
+            padding: 1rem;
+            
+
+           
+        }
+        div:nth-child(2) {
+            grid-area: square-2;
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            background-color: blueviolet;
+          
+        }
+        div:nth-child(3) {
+            grid-area: circle-3;
+            background-color: palevioletred;
+            border-radius: 6rem;
+           
+        }
+        div:nth-child(4) {
+            grid-area: square-4;
+            background-color: peru;
+        }
+        div:nth-child(5) {
+            grid-area: circle-5;
+            background-color: fuchsia;
+            border-radius: 6rem;
+            
+        }
+        div:nth-child(6) {
+            grid-area: square-6;
+            background-color: lightgreen;
+        }
+        div:nth-child(7) {
+            grid-area: circle-7;
+            background-color: olivedrab;
+            border-radius: 6rem;
+        }
+        div:nth-child(8) {
+            grid-area: square-8;
+            background-color: mediumorchid;
+            
+        }
+        div:nth-child(9) {
+            grid-area: circle-9;
+            background-color: mediumaquamarine;
+            border-radius: 6rem;
+        }
+        div:nth-child(10) {
+            grid-area: square-10;
+            background-color: goldenrod;
+        }
+        div:nth-child(11) {
+            grid-area: circle-11;
+            background-color: violet;
+            border-radius: 6rem;
+        }
+        div:nth-child(12) {
+            grid-area: square-12;
+            background-color: wheat;
+        }
+        div:nth-child(13) {
+            grid-area: circle-13;
+            background-color: indianred;
+            border-radius: 6rem;
+
+        }
+        div:nth-child(14) {
+            grid-area: square-14;
+            background-color: khaki;
+        }
+        div:nth-child(15) {
+            grid-area: circle-15;
+            background-color: indianred;
+            border-radius: 6rem;
+        }
+        div:nth-child(16) {
+            grid-area: square-16;
+            background-color: darkcyan;
+        }
+        div:nth-child(17) {
+            grid-area: circle-17;
+            background-color: burlywood;
+            border-radius: 6rem;
+        }
+        div:nth-child(18) {
+            grid-area: square-18;
+            background-color: lightcoral;
+        }
+        div:nth-child(19) {
+            grid-area: circle-19;
+            background-color: rebeccapurple;
+            border-radius: 6rem;
+        }
+        div:nth-child(20) {
+            grid-area: square-20;
+            background-color: lawngreen;
+        }
+        div:nth-child(21) {
+            grid-area: circle-21;
+            background-color: turquoise;
+            border-radius: 6rem;
+        }
+        div:nth-child(22) {
+            grid-area: square-22;
+            background-color: firebrick;
+        }
+        div:nth-child(23) {
+            grid-area: circle-23;
+            padding: 2rem;
+            background-color: olive;
+            border-radius: 6rem;
+        }
+        div:nth-child(24) {
+            grid-area: square-24;
+            padding: 2rem;
+            background-color: antiquewhite;
+        }
+        @media (min-width: 1000px) { 
+           div:first-child{
+            grid-area: circle-1;
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            
+            background-color: plum;
+            border-radius: 6rem;
+            
+
+           
+        }
+        div:nth-child(2) {
+            grid-area: square-2;
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            background-color: blueviolet;
+          
+        }
+        div:nth-child(3) {
+            grid-area: circle-3;
+            background-color: palevioletred;
+            border-radius: 6rem;
+            grid-row: 8 / 9;
+            grid-column: 3 / 4; 
+           
+        }
+        div:nth-child(4) {
+            grid-area: square-4;
+            background-color: peru;
+        }
+        div:nth-child(5) {
+            grid-area: circle-5;
+            background-color: fuchsia;
+            border-radius: 6rem;
+            
+        }
+        div:nth-child(6) {
+            grid-area: square-6;
+            background-color: lightgreen;
+        }
+        div:nth-child(7) {
+            grid-area: circle-7;
+            background-color: olivedrab;
+            border-radius: 6rem;
+        }
+        div:nth-child(8) {
+            grid-area: square-8;
+            background-color: mediumorchid;
+            
+        }
+        div:nth-child(9) {
+            grid-area: circle-9;
+            background-color: mediumaquamarine;
+            border-radius: 6rem;
+        }
+        div:nth-child(10) {
+            grid-area: square-10;
+            background-color: goldenrod;
+        }
+        div:nth-child(11) {
+            grid-area: circle-11;
+            background-color: violet;
+            border-radius: 6rem;
+        }
+        div:nth-child(12) {
+            grid-area: square-12;
+            background-color: wheat;
+        }
+        div:nth-child(13) {
+            grid-area: circle-13;
+            background-color: indianred;
+            border-radius: 6rem;
+
+        }
+        div:nth-child(14) {
+            grid-area: square-14;
+            background-color: khaki;
+        }
+        div:nth-child(15) {
+            grid-area: circle-15;
+            background-color: indianred;
+            border-radius: 6rem;
+        }
+        div:nth-child(16) {
+            grid-area: square-16;
+            background-color: darkcyan;
+        }
+        div:nth-child(17) {
+            grid-area: circle-17;
+            background-color: burlywood;
+            border-radius: 6rem;
+        }
+        div:nth-child(18) {
+            grid-area: square-18;
+            background-color: lightcoral;
+        }
+        div:nth-child(19) {
+            grid-area: circle-19;
+            background-color: rebeccapurple;
+            border-radius: 6rem;
+        }
+        div:nth-child(20) {
+            grid-area: square-20;
+            background-color: lawngreen;
+        }
+        div:nth-child(21) {
+            grid-area: circle-21;
+            background-color: turquoise;
+            border-radius: 6rem;
+        }
+        div:nth-child(22) {
+            grid-area: square-22;
+            background-color: firebrick;
+        }
+        div:nth-child(23) {
+            grid-area: circle-23;
+            padding: 2rem;
+            background-color: olive;
+            border-radius: 6rem;
+        }
+        div:nth-child(24) {
+            grid-area: square-24;
+            padding: 2rem;
+            background-color: antiquewhite;
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+        }
+    }
       
-      padding: 5px;
-      border-radius: 20px;
+        @media (max-width: 768px) {
 
-     margin: 50px 25px 50px 25px;
- }
+            body {
+            display: grid; 
+            margin: 0rem 5rem 0rem 5rem;
+           justify-content: center;
+           background-color: #e84393;
+background-image: linear-gradient(315deg, #e84393 0%, #000000 74%);
 
-.nav > div {
-    padding: 10px;
+           
+           grid-gap: 30px;
+            text-align: center;
+            grid-template-areas: 
+               "circle-1" 
+               "square-2" 
+               "circle-3"
+                "square-4"
+                 "circle-5" 
+                 "square-6"
+                "circle-7" 
+                "square-8"
+                "circle-9"
+                "square-10"
+                "circle-11" 
+                "square-12"
+                "circle-13" 
+                "square-14"
+                "circle-15"
+                "square-16"
+                "circle-17" 
+                "square-18"
+                "circle-19"
+                "square-20" 
+                "circle-21"
+                "square-22"
+                "circle-23"
+                 "square-24"
+                
+               
+            
+            ;
+        }
+        body > * {
+        
+           width: 100%;
+           height: 100%;
+          
+         
+           
+          
+        }
+         div:first-child {
+            grid-area: circle-1;
+           grid-row: 3  / 4;
+           grid-column: 1 / 3;
+           background-color: darkslategray;
+
+            border-radius: 4rem;
+           
+           
+          
+            
+            
+            
+
+           
+        }
+        div:nth-child(2) {
+            grid-area: square-2;
+            grid-row: 4 / 5;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(3) {
+            grid-area: square-3;
+            grid-row: 6 / 7;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+        }
+        div:nth-child(4) {
+            grid-area: square-4;
+            grid-row: 7 / 8;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(5) {
+            grid-area: square-5;
+            grid-row: 9 / 10;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(6) {
+            grid-area: square-6;
+            grid-row: 11 / 12;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(7) {
+            grid-area: square-7;
+            grid-row: 12 / 13;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(8) {
+            grid-area: square-8;
+            grid-row: 13 / 14;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(9) {
+            grid-area: square-9;
+            grid-row: 14 / 15;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(10) {
+            grid-area: square-10;
+            grid-row: 15 / 16;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
     
-
-}
-.nav div:first-child{
-    flex: 30%;
-    text-align: center;
-   
-}
-.nav div:nth-child(2){
-  flex: 30%;
-    text-align: center;
-}
-.nav div:last-child{
-    flex: 30%;
-    text-align: center;
-
-}
-.header {
-    display: flex; 
-    flex-flow: row wrap;
-justify-content: center;
+        div:nth-child(11) {
+            grid-area: square-11;
+            grid-row: 16 / 17;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
     
-  
-    margin: 50px 25px 50px 25px;
-    border-radius: 20px;
-
-
-}
-
-.header > div {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-
-}
-
-
-.container {
-    display: flex;
-    flex-flow: column wrap;
+        div:nth-child(12) {
+            grid-area: square-12;
+            grid-row: 17 / 18;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(13) {
+            grid-area: square-13;
+            grid-row: 18 / 19 ;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
     
-    padding: 1em 0;
-    text-align: left;
-}
-.card {
+        div:nth-child(14) {
+            grid-area: square-14;
+            grid-row: 19 / 20;
+            grid-column: 1  / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(15) {
+            grid-area: square-15;
+            grid-row: 20 / 21;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
     
-    width: 75%;
-    display: flex;
-    background: sandybrown;
-    padding: 30px;
-    margin-bottom: 1em;
-    border-radius: 50px;
+        div:nth-child(16) {
+            grid-area: square-16;
+            grid-row: 21 / 22;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }    div:nth-child(17) {
+            grid-area: square-17;
+            grid-row: 22 / 23;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+    
+        div:nth-child(18) {
+            grid-area: square-18;
+            grid-row: 23 / 24;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(19) {
+            grid-area: square-19;
+            grid-row: 24 / 25;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+    
+        div:nth-child(20) {
+            grid-area: square-20;
+            grid-row: 25 / 26;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(21) {
+            grid-area: square-21;
+            grid-row: 26 / 27;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 4rem;
+          
+        }
+    
+        div:nth-child(22) {
+            
+            grid-area: square-22;
+            grid-row: 27 / 28;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+           
+            border-radius: 4rem;
+          
+        }
+        div:nth-child(23) {
+            grid-area: square-23;
+            grid-row: 1/ 2;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
  
-    box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
-    border: solid 5px plum;
-  }
+            
   
-  .img {
-    min-width: 80px;
-    height: 100px;
+            border-radius: 2rem;
+      
+          
+        }
     
-    border-radius: .3em;
-    background: linear-gradient(to bottom, #d6c091 0%, #C05C9A 100%);
-    opacity: .7;
-    margin: 0 .6em 0 0;
-    border: solid 5px firebrick;
-  }
-  
-  .card h3 {
-    margin: 0;
-    font-size: 1em;
-  }
-  
-  .content p {
-    margin: 0;
-    font-size: 1.2em;
-    color: #222;
-  }
-  
-  @media (max-width: 820px) {
-    .container {
-      min-width: auto;
-      display: flex;
-    }
-    .card {
-      width: 98%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      box-shadow: none;
-    }
-  }
-
-
-
-
-.footer {
-    display: flex; 
-    flex-flow: row wrap;
+        div:nth-child(24) {
+            grid-area: square-24;
+            grid-row: 2/ 3;
+            grid-column: 1 / 3;
+            background-color: darkslategray;
+            border-radius: 2rem;
+            padding: 6rem;
+            padding: 10rem;
     
-  background-color: tomato;
-   padding: 25px;
-    margin: 20px 25px 50px 25px;
-    border-radius: 20px;
-    border: 5px solid silver;
-
-
-}
-        
-        
-        
-        </style>
-    </head>
-</html>
-
-<body>
-    <div class='nav'> 
-
-        <div>  <a href='#'><img style='width: 50px; height: 50px;' src='https://s2.coinmarketcap.com/static/img/coins/200x200/8978.png' alt='poocoin'> </a></div>
-        <div>  <a href='https://t.me/DrShibaMD'><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="black" class="bi bi-telegram" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-          </svg></a> </div>
-
-
-
-
-    </div>
-    <div class='header'>
-<h1> Dr. Baby Doge</h1>
-<div></div>
-<div></div>
-<div></div>
-
-    </div>
   
-
-    <main class="container">
-        <div class="card">
-            <div class="img"></div>
-            <div class="content"><h2><em>Who is Dr. Baby Doge?</em></h2><br> <p>All his life <b style='color: darkblue'><em> Dr. Baby Doge</em></b>  wanted one thing in the world, and that was to become a doctor. Dr. Baby Doge wants to help those who can't help themselves. Dr. Baby Doge wants to be the first ever......
-                <br> <br> <b>"Defi Health Care Insurance Token"</b> <br> 
-             <br> <em> How does the Dr. Baby Doge community plan on accomplishing this goal ? </em></p></div>
-          </div>
-        <div class="card">
-          <div class="img"></div>
-          <div class="content"><h2><em>GoFundMe Donations</em></h2><br> <p> <em>IMPORTANT!! (view our tokenomics at the bottom of the page)</em> <br> <br> When you <b> invest </b> in Dr. Baby Doge you will helping to change lives. <br> <br> There will be <b style='color: darkred;'>two wallets set up</b> a <b>Marketing Wallet </b> and a <b>GoFundMe wallet. </b> <br> <br> Our  <b>GoFundMe</b>  wallet at a <em>(set value) </em>will begin to donate to random choosen <b>GoFundMes</b> that were pre-approved by our team.
-            <br> <br> <i> Why are we doing this ?</i> <br> <br> <em>Invidiuals dealing with large hospital bills will be assisted to reach their goal. Nobody should have to go homeless due to medical bills. This reality is true all over the world. <b>Dr. Baby Doge </b> wants to help take down these expenses. Our community plans to build awareness of those whose lives are forsakened by medical expenses.</em>
-           </p></div>
-        </div>
-        <div class="card">
-          <div class="img"> </div>
-          <div class="content"><h3>Medical Map Phase #1</h3><br><p> We are actively rebuilding and designing the website. This will be our main goal of <b>Phase #1.</b> Dr Baby Doge will be converted into an decentralized application where you can purchase Dr. Baby Doge from our exchange. <br> <br> <b> 100% community driven </b><br><br> <em> With Everyones support you can be apart of something bigger than yourself. </em>
-             
-          </p></div>
-        </div>
-        <p>
-   
-    </p></div>
-        </div>
-        <div class="card">
-          <div class="img">  </div>
-          <div class="content"><h3>Medical Map Phase #2</h3><br><p>One of the great things about Dr. Baby Doge is that <b>Phase #2</b> will be worked on adjacent with <b>Phase #1.</b> <br> <br> <em> What does that mean ?</em><br> <br> That means were going to be moving at a <i><b>fast pace.</b></i> <br><br>  The <b> 2% </b>for marketing will be used to get us listed on <br> <br> <b>Coingecko, </b> and <b> Coin Market Cap </b> as well as  .... <br><br>  <em> DEX tools trending list EVERDAY!!</em></p></div>
-        </div>
-        <div class="card">
-          <div class="img"></div>
-          <div class="content"><h3>Medical Map Phase #3</h3><p>Dr. Baby Doge has three phases and <b>that is it! </b> <br> <br> Our team will be focusing on our ultimate goal, and that will be producing our own blockchain for <b>Dr. Baby Doge. </b> <br>
-          This may sound like a farfetched goal but in reality it isn't. The impact <b> Dr. Baby Doge </b> plans to have on <b> GoFundMe</b> will help build us into a strong community of <b>"hodlers"</b><br> <br>
-          Our dedicated community will be rewarded with being able to take the opportunity to stake their coins into the <b> First Ever Defi Health Care Token</b> <br> <br> 
-          <i> What does this mean ?</i> <br> <br> 
-         <em> Think about a world where you never have to pay extra medical expenses ever again. <br> <br>  Co-payments will be a thing of the passed. Having to postpone an important surgery due to cost will no longer be an issue. <br> <br> </em>
+            
+           
+          
+        }
+        .zone ul{
+            /*
+            display: grid;
+            list-style-type: none;
+            grid-gap: 15px;
+            grid-template-areas: 
+                "home" 
+                "login" 
+                "cart";
+                */
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+            
+        }
+        .zone ul li:first-child {
+           /* grid-area: home;
+            grid-row: 1 / 2;
+            grid-column:  1 / 2;
+            */ 
+            flex: 1 0 25%;
+            text-align: left;
+            font-size: 1.7rem;
+            
+        }
+        .zone ul li:nth-child(2) {
+            /*
+            grid-area: login;
+            */ 
+            flex: 0 0 15%;
+            text-align: right;
+            font-size: 1.7rem;
+        
+        }
+        .zone ul li:nth-child(3)  {
+            /*
+            grid-area: cart;
+            */
+            flex: 0 0 15%;
+            text-align: right;
+            font-size: 1.7rem;
+        
+        }
+        .zone-1  {
+            display: flex;
+         
+            
           
         
-        </p></div>
-        </div>
-        <div class="card">
-          <div class="img"></div>
-          <div class="content"><h3>Tokenomics</h3><p>
-            Dr. Baby Doge is 100% community driven. Liquidity will be locked upon launch as well as the developers wallet will be burned. 
-            <br> <br><b> <i style='color: rebeccapurple'>NO MORE </i> Pump and Dumps </b> <br> <br>
-            <i> We are a Meme Token with utility.</i> <br> <br> 
-            <b> 2% for Marketing </b> <br> 
-            <b> 2% for GoFundMe Donations </b> <br> 
-            <b> 2% for Liquidity Pool </b> <br>  <br>
-            <b> AND THAT IS IT!!! </b> <br> 
-
-
-
-          </p></div>
-        </div>
+            
+        }
+        .zone-1 div {
+             
+            color: white;
+          background-color: red;
+          padding: 2rem;
+           
+           
         
-        </div>
+       
+           
+           
+        }
+        .zone-1 div p {
+            margin: 4rem 10px 15px 10px;
+            
+        }
+        .zone-3  {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        
+            padding: .5rem;
+
+        }
+        .zone-3 div {
+          
+          color: white;
+          background-color: red;
+          padding: 2rem;
+        
+      
+          
+          
+       }
+       .zone-3 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-4  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-4 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+          
+          
+       }
+       .zone-4 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-5 {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-5 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-5 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-6  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-6 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-6 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-7  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-7 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-7 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-8  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-8 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-8 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-9  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-9 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-9 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-10  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-10 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+          
+          
+       }
+       .zone-10 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-11  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-11 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-11 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-12  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-12 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-12 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-13  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-13 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-13 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-14  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-14 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-14 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-15  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-15 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 1rem;
+      
+          
+          
+       }
+       .zone-15 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-16  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-16 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-16 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-17  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-17 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-17 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-18  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-18 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-18 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-19  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-19 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-19 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-20  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-20 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-20 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-21  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-21 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-21 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-22  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-22 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-22 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-22  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-22 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+      
+          
+          
+       }
+       .zone-22 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+       .zone-23  {
+            display: flex;
+            
+            align-items: stretch;
+        
+            padding: 1rem;
+
+        }
+        .zone-23 div {
+          
+          color: white;
+          background-color: red;
+          text-align: center;
+          padding: 2rem;
+          
+          
+       }
+       .zone-23 div p {
+           margin: 4rem 10px 15px 10px;
+           
+       }
+        }
+
+    </style>
+</head>
+<body>
    
 
-    
-
-  
-
-    <div class='footer'>
 
 
-        <div>  Check us out on Poocoins  </div>
-        <div>  Twitter (coming soon) </div>
+<div class='zone-1'> 
+<div style='display: flex; justify-content: center; flex-direction: column; align-items: center;'> 
+<img src='shirts.jpeg'  > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+<p> $18.00</p>
+<div style='display: flex; justify-content: center; padding: 1rem; '> 
+<div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+</div>
+</div>
+
+
+</div>
+<div class='zone-3'>  
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+        
         
 
-    </div>
 
 
+</div>
+
+<div class='zone-4'> 
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+        
+
+</div> 
+<div class='zone-5'>  
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+
+</div>
+<div class='zone-6'> 
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+
+</div>
+<div class='zone-7'> 
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+</div>
+<div class='zone-8'>  
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+
+</div>
+<div class='zone-9'>  
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+
+</div>
+<div class='zone-10'>  
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+
+</div>
+<div class='zone-11'>  
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+<div class='zone-12'>  
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+<div class='zone-13'> 
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+
+
+</div>
+<div class='zone-14'>  
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+<div class='zone-15'> 
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+<div class='zone-16'>  
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+<div class='zone-17'>  
+    
+
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+
+</div>
+<div class='zone-18'> 
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+<div class='zone-19'>  
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+</div>
+<div class='zone-20'>  
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+<div class='zone-21'>  
+    
+
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+</div>
+<div class='zone-22'>  
+    
+
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+</div>
+<div class='zone-23'> 
+    
+    <div> 
+        <img src='shirts.jpeg' > Lorna Shore ...And I Return To Nothingness Cover Shirt </img> 
+        <p> $18.00</p>
+        <div style='display: flex; justify-content: center; padding: 1rem; '> 
+        <div style='background-color: #e84393;'>Small  </div> <div style='background-color: forestgreen;'> Medium </div>   <div style='background-color: darkgoldenrod'>  Large </div> 
+        </div>
+        </div>
+
+</div>
+
+<div class='zone'> 
+ <ul> 
+     <li> Home </li>
+     <li> Login</li>
+     <li> Cart</li>
+ </ul>   
+
+</div>
+<div>  
+    
+    
+
+</div>
 
 
 
